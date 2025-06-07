@@ -2,21 +2,14 @@
 // processing
 // Output --> string
 
-// sum of the digits of a positive integer
+// Task:
+// Create a function which takes in a word and spells it out
 
-// input არის 1 გაერთიანებული ნამბერები რაც 1 არგუმენტს მიეწოდება, პირობითად 4 ციფრი, და ეს უნდა დაემატოს ერთმანეთ
+// -->Input -> სტრინგი
+// -->split :) convert string to array and split by charachter by charachter
+// -->Output -> სიტყვა უნდა იყოს დამარცვლილი და გამოტანილი მასივის სახით
 
-function integerNum(allNum) {
-  const convert = [allNum];
-  const converToString = convert.join("").split("");
 
-  const newArray = [];
+const spelling = (str) => str.split("");
 
-  for (var i = 0; i < converToString.length; i++) {
-    newArray.push((Number(converToString[i])));
-  }
-  return newArray.reduce((acc, cur) => acc + cur, 0);
-}
-
-console.log(integerNum(234234324329));
-// return
+console.log(spelling("happy"))
