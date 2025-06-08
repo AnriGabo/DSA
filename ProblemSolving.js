@@ -5,14 +5,16 @@
 
 //Medium Level Array task
 
-// -- create a function which return the number of true values there are in an array;
+// The values false, null, 0, "", undefined, and NaN are falsey.
 
-// -->input, array of boolean
-// processing --> filter method
+// -->Input შედის ყველა ტიპის ელემენეტი მასივშიი 
+// 
+// Processing -> ვფიქრობ ნამბერ ტიპად ხოარ მოვაქციო თითოეული თქო Number, for loopში
 
-// -->output: count how much true is this
+// Output: მხოლოდ ნამბერების მასივი
 
-const countTrue  = (bool) => bool.filter((item) => item === true).length;
+const compact = (arr) => {
+  return arr.filter((Item) => Boolean(Item) === true);
+}
 
-
-console.log(countTrue([false,false,false,true,true]))
+console.log(compact([0,1,false,"",null,2,3,undefined]))
