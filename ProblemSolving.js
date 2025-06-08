@@ -2,21 +2,17 @@
 // processing
 // Output --> string
 
-// Task:
-// Create a function which takes in a word and spells it out
 
-// input --> ორი სტრინგი, და უნდა გავიგოთ პირველი პარამეტრი რომელ ინდექსზე შეიცავს მეორე პარამეტრს
+//Medium Level Array task
 
-//output --> გამოიტანოს რომელ ინდექსზე შეიცავს მეორე პარამეტრს
+// -- create a function which return the number of true values there are in an array;
 
-const index = (word, i) => {
-  return word.includes(i)
-    ? `the charachter ${i} has first index ${word.indexOf(
-        i
-      )} and last index ${word.lastIndexOf(i)}`
-    : `the charachter ${i} does not exist`;
-};
+// -->input, array of boolean
+// processing --> filter method
 
-console.log(index("hello", "l"));
+// -->output: count how much true is this
 
-// ------------------------------------------------------------------------------------------------------------------
+const countTrue  = (bool) => bool.filter((item) => item === true).length;
+
+
+console.log(countTrue([false,false,false,true,true]))
