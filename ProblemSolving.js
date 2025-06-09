@@ -3,18 +3,27 @@
 // Output --> string
 
 
-//Medium Level Array task
 
-// The values false, null, 0, "", undefined, and NaN are falsey.
+// -->Input არის რამოდენიმე დამოუკიდებელი მასივი რომელიც უნდა გადაკონვერტირდეს ერთ მასივად
 
-// -->Input შედის ყველა ტიპის ელემენეტი მასივშიი 
-// 
-// Processing -> ვფიქრობ ნამბერ ტიპად ხოარ მოვაქციო თითოეული თქო Number, for loopში
+// function concat(...args){
+    
+//     console.log(args.length);
+//     const emptyArray = [];
 
-// Output: მხოლოდ ნამბერების მასივი
+//     for (var i = 0; i < args.length;i++){
+//         emptyArray.push(...args[i])
+//     }
+//     return emptyArray;
+// }
 
-const compact = (arr) => {
-  return arr.filter((Item) => Boolean(Item) === true);
+// console.log(concat([1],[2],[3],[4],[5],[6],[7]))
+
+
+function concat(...args){
+    // ....args არის spread ოეპრატორი რომელიც რამოდენიმე მასივს ყველას აერთიანებს და აქცევს 1 მასივად
+    return args.flat(Infinity);
 }
 
-console.log(compact([0,1,false,"",null,2,3,undefined]))
+console.log(concat([1],[2],[3],[4],[5],[6]))
+//-->Output მასივი რომელშიც გაერთიანებულია ყველა დამოკიდებელი მასივი ერთ მთლიან მასივად
