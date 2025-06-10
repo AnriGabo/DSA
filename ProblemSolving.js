@@ -2,28 +2,19 @@
 // processing
 // Output --> string
 
+// Data Structure 1 array
+// Given two strings, create a function that returns the total number of unique characters from the combined string.
 
+// countUnique("apple", "play") ➞ 5
+// // "appleplay" has 5 unique characters:
+// // "a", "e", "l", "p", "y"
 
-// -->Input არის რამოდენიმე დამოუკიდებელი მასივი რომელიც უნდა გადაკონვერტირდეს ერთ მასივად
-
-// function concat(...args){
-    
-//     console.log(args.length);
-//     const emptyArray = [];
-
-//     for (var i = 0; i < args.length;i++){
-//         emptyArray.push(...args[i])
-//     }
-//     return emptyArray;
-// }
-
-// console.log(concat([1],[2],[3],[4],[5],[6],[7]))
-
-
-function concat(...args){
-    // ....args არის spread ოეპრატორი რომელიც რამოდენიმე მასივს ყველას აერთიანებს და აქცევს 1 მასივად
-    return args.flat(Infinity);
+// -->Input  2 სტრინგი,
+// -->length, split, join, sprad
+// როცა დუბლიკატები არ არსებობს
+function countUnique(word, word1) {
+  const str = word + word1;
+  return uniqueStr = [...new Set(str)];
 }
 
-console.log(concat([1],[2],[3],[4],[5],[6]))
-//-->Output მასივი რომელშიც გაერთიანებულია ყველა დამოკიდებელი მასივი ერთ მთლიან მასივად
+console.log(countUnique("apple", "play"));
