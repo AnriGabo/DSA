@@ -2,17 +2,17 @@
 // processing
 // Output --> string
 
+// ->input : 1 0 ების ნაკრები, 1 = true, 0 = false;
 
-// -->Input მასივები უნდა გვქონდეს თარიღის ფორმატში,დეკემბერი 23 და ესე, და მეორე ინფათი თვე, და გადავამოწმოთ უნდა
-// ამ თვეში რამდენჯერ დაიდო ვიდეო, მეორე არგუემნტის მიხედვით უნდა გადამოწმდეს
-
-
-const uploadCount = (dates,day) =>{
-    const filterElement = dates.filter((Item) => Item.includes(day))
-    return filterElement.length;
+function integerBoolean(integer) {
+  const modifyNum = [integer].join("").split("");
+  const mapingElement = modifyNum.map((Item) => Number(Item));
+  const compare = mapingElement.map((Itemiko) =>
+    Itemiko === 1 ? true : false
+  );
+  return compare;
 }
 
-console.log(uploadCount(["Sept 22", "Sept 21", "Oct 15"], "Oct"))
+console.log(integerBoolean("1010101010101"));
 
-
-// -->Output how many times number format
+// -->output: boolean
