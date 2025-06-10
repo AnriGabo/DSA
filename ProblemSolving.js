@@ -2,19 +2,17 @@
 // processing
 // Output --> string
 
-// Data Structure 1 array
-// Given two strings, create a function that returns the total number of unique characters from the combined string.
 
-// countUnique("apple", "play") ➞ 5
-// // "appleplay" has 5 unique characters:
-// // "a", "e", "l", "p", "y"
+// -->Input მასივები უნდა გვქონდეს თარიღის ფორმატში,დეკემბერი 23 და ესე, და მეორე ინფათი თვე, და გადავამოწმოთ უნდა
+// ამ თვეში რამდენჯერ დაიდო ვიდეო, მეორე არგუემნტის მიხედვით უნდა გადამოწმდეს
 
-// -->Input  2 სტრინგი,
-// -->length, split, join, sprad
-// როცა დუბლიკატები არ არსებობს
-function countUnique(word, word1) {
-  const str = word + word1;
-  return uniqueStr = [...new Set(str)];
+
+const uploadCount = (dates,day) =>{
+    const filterElement = dates.filter((Item) => Item.includes(day))
+    return filterElement.length;
 }
 
-console.log(countUnique("apple", "play"));
+console.log(uploadCount(["Sept 22", "Sept 21", "Oct 15"], "Oct"))
+
+
+// -->Output how many times number format
