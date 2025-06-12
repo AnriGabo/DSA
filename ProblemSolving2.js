@@ -2,17 +2,22 @@
 
 // შექმენით ფუნქცია რომელიც იღებს მასივს
 
-// -->input: array,ნებიმისერი ტიპის
-// processing new Set მეთოდი, filter,
+// Task:Finding Nemo
 
-const testJackpot = (jackpot) => {
-  const checkingSet = [...new Set(jackpot)];
-  return checkingSet.length === 1 ? true : false;
-  // თუ სეტის რაოდენობა იქნება 1 ანუ ნიშნავს რომ ეს არის უნიკალური იდენტიფიკატორებით შემადგენეელი მასივი
-  // რადგანროცა უნიკალურებია ეს 1 ელემენტად  კვეცავს ყველას  და ელემენტების რაოდენობაც არის 1,მარა თუ სხვადასხვაებია,მაშინ უკვე 2
-  //   ან მეტია მაშინ ანუ დუბლირებული იყო
-};
+// input string of words
 
-console.log(testJackpot(["@", "@", "@", "@"]));
+// word transform,join,split,includes,ternerul logic
 
-// -->ouput-->true თუ ყველა ელემენტი არისიდენტური, და falseთუ არ არის ყველა იდენტური
+
+function findNemo(nemo){
+    const checkNemoExistOrNo = nemo.includes("Nemo");
+    if(checkNemoExistOrNo === true){
+                                                //  index = 0, element 1,
+       return [nemo].join().split(" ").indexOf("Nemo") + 1
+    }else{
+        return console.log("Nemo Does not exist")
+    }
+}
+console.log(findNemo("Nemo I am finding",))
+//output -->ვიპოვოთ უნდა სახელი Nemo, და დავაბრუნოთ უნდა i fount Nemo at და რომელ ორდერზეც იპოვე იმას დააბრუნებ
+//თუვერ ვიპოვეთ ნემო მაშინ დააბრუნებს i can not find Nemo
