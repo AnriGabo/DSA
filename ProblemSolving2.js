@@ -6,18 +6,13 @@
 
 // input string of words
 
-// word transform,join,split,includes,ternerul logic
+//uoutput order of the word nemo
 
-
-function findNemo(nemo){
-    const checkNemoExistOrNo = nemo.includes("Nemo");
-    if(checkNemoExistOrNo === true){
-                                                //  index = 0, element 1,
-       return [nemo].join().split(" ").indexOf("Nemo") + 1
-    }else{
-        return console.log("Nemo Does not exist")
-    }
+function findNemo(Nemo) {
+  const CheckExistNemoOrNot = Nemo.includes("Nemo");
+  const FindingNemo = Nemo.split(" ").indexOf("Nemo") + 1;
+  const Texting = `I Found Nemo at ${FindingNemo}`;
+  return CheckExistNemoOrNot ? Texting : console.log("Nemo Does Not Exist");
 }
-console.log(findNemo("Nemo I am finding",))
-//output -->ვიპოვოთ უნდა სახელი Nemo, და დავაბრუნოთ უნდა i fount Nemo at და რომელ ორდერზეც იპოვე იმას დააბრუნებ
-//თუვერ ვიპოვეთ ნემო მაშინ დააბრუნებს i can not find Nemo
+
+console.log(findNemo("Nemo I am finding!"));
