@@ -5,8 +5,7 @@
 
 // Arrays:
 
-let mixedType: (string[] | number[])[] = [
-    [1,2,3,4],
-    ["anriko","gabski"],
-    [3,4,5,6]
-]
+
+
+
+let mixedType: (number[] | string[] | boolean[] )[]   = [[1,2,3], ["anriko","gabo","anro"], [true,false]];

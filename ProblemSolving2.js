@@ -2,17 +2,19 @@
 
 // შექმენით ფუნქცია რომელიც იღებს მასივს
 
-// Task:Finding Nemo
+// Total Volume of All Boxes;
 
-// input string of words
 
-//uoutput order of the word nemo
+// Create function that takes 2 arguments
+//Input --> 2 String argument, first string is single charachter
 
-function findNemo(Nemo) {
-  const CheckExistNemoOrNot = Nemo.includes("Nemo");
-  const FindingNemo = Nemo.split(" ").indexOf("Nemo") + 1;
-  const Texting = `I Found Nemo at ${FindingNemo}`;
-  return CheckExistNemoOrNot ? Texting : console.log("Nemo Does Not Exist");
+// processing --> includes, first index of, last index of,
+
+function charCount(char,word){
+    const SplitTheWord = word.split("");
+    return SplitTheWord.filter((item) => item === char).length;
 }
 
-console.log(findNemo("Nemo I am finding!"));
+console.log(charCount("b","big fat bubble"))
+
+// Output რამდენჯერ განმეორდა პირველი სტრინგი მეორესტრინგში
