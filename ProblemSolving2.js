@@ -1,22 +1,9 @@
-// count of vowels
+// -->input: String word
+// processing: reverse
+// Output: reverse the string word by word, first word will be the last, and last will be first
 
-// input string
-// a, e, i, o, u is vowel
-// function vowelsCharachter(vowel) {
-//   const vowCharachter = vowel.split("");
-//   const filterElement = vowCharachter.filter(
-//     (item) => item === "a" || item === "e" || item === "i" || item === "o" || item === "u"
-//   );
+function reverseWord(opositeWord) {
+  return opositeWord.split(" ").reverse().join("-")
+}
 
-//   return filterElement.length;
-// }
-
-// console.log(vowelsCharachter("Palm"));
-// // output რამდენ ხმოვანს შეიცავს ჩვენი სიტყვა და დააბრუნოს ლენგსი
-
-const countVowels = (str) => {
-  const vowels = "aeiou";
-  return str.toLowerCase().split("").filter((char) => vowels.includes(char)).length
-};
-
-console.log(countVowels("Hello"))
+console.log(reverseWord("anri gabaidze"));
