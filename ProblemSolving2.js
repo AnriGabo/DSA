@@ -1,14 +1,15 @@
-// Transforming Words into Binary Strings
-
-// input -- string word
-// output:binary string
-
-// letters from [a,m] equal to 0, and letters from [n,z] to 1;
+// input - takes a string as an argument,
 
 
-function convertBinary(str){
-    const AtoM = "ABCDEFGHIJKLM".toLowerCase();
-    return str.split("").map((Item) => AtoM.includes(Item) ? 0 : 1).join("")
+// რაოდენობას არ ვაბრუნებთ
+// ვაბრუნებთ მარცხენა მხარეს არსებული ციფრი უნდა დავაბრუნოთ
+
+// find,პირველივე შემხვედრს დააბრუნებს და დანარჩენს დაიკიდებს
+
+// isNaN means  = is Not a number, string - correct because string is not a numbet,but !isNan means is Number;
+
+function leftDigit(str){
+    return str.split("").filter((item) => !isNaN(item)).map(Number).slice(0,1)
 }
 
-console.log(convertBinary("moon"))
+console.log(leftDigit("TrAdE21352434234234222223210W1n95"))
