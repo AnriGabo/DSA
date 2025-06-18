@@ -1,15 +1,19 @@
-// input - takes a string as an argument,
+// marathonDistance  25 mile marathon
 
+// Input მასივი უნდა იყოს სადაც იქნება კილომეტრები ნამბერების სახით ნაჩვენები, იმ შემთხვევაში თუ
+// მასივების დაჯამებით 25 კილომეტრზე მეტი იქნება მაშინ იქნქბეa true, otherwise false
 
-// რაოდენობას არ ვაბრუნებთ
-// ვაბრუნებთ მარცხენა მხარეს არსებული ციფრი უნდა დავაბრუნოთ
+// Math abs ის მეშვეობით ხდება ნეგატიური ციფრების პოზიტიურად აღქმა
+// 1)გადავაკონვერტიროთ ყველა ციფრი პოზიტიურად
 
-// find,პირველივე შემხვედრს დააბრუნებს და დანარჩენს დაიკიდებს
-
-// isNaN means  = is Not a number, string - correct because string is not a numbet,but !isNan means is Number;
-
-function leftDigit(str){
-    return str.split("").filter((item) => !isNaN(item)).map(Number).slice(0,1)
+function marathonDistance(km) {
+  const convertNaturalAndSumAllTheNum =
+    km.map((item) => Math.abs(item)).reduce((acc, cur) => acc + cur, 0) >= 25
+      ? true
+      : false;
+  return convertNaturalAndSumAllTheNum;
 }
 
-console.log(leftDigit("TrAdE21352434234234222223210W1n95"))
+console.log(marathonDistance([-6, 15, 4]));
+
+// output: boolean
