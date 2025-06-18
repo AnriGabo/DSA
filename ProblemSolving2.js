@@ -1,20 +1,13 @@
-// Return the Highest and Lowest Numbers
+// Create a function that takes an integer n and reverses it.
 
-// Input String სივრცეებით გამოტოვებული ციფრები
+// შექმენით ფუნქცია, რომელიც იღებს სტრინგის მთელ რიცხვს და აბრუნებს მას, reverse, reduce : )
+// Math.abs  negative convert to positive
 
-// Output String ყველაზე დიდი ციფრი პირველი, და მერე ყველაზე დაბალი ციფრი მეორე
-
-// -- იმ შემთხვევაში რეალურად თუ იქნება 1 ციფრი, დააბრუნებს 1ს ორად ანუ ეგ იქნება დიდიც და პატარაც
-
-function highLow(strNum) {
-  const convertToNumber = strNum.split(" ").map(Number);
-
-  const highestNum = Math.max(...convertToNumber);
-  const lowestNum = Math.min(...convertToNumber);
-
-  return `"${highestNum} ${lowestNum}"`;
+function reverseTheNumber(reverse) {
+  return Math.abs(reverse)
+    .toString()
+    .split("")
+    .reduce((acc, char) => char + acc, 0);
 }
 
-// Math max, math min
-
-console.log(highLow("1 2 3 4 5"));
+console.log(reverseTheNumber("-23432423"));
