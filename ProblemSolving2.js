@@ -1,28 +1,28 @@
-function filteredArray(arr, elem) {
-  let newArr = [];
-  for(var i = 0; i < arr.length; i++){
+// Create a function that takes a string and returns a new string with its first and last characters swapped,
 
-    // თუ მასივი არ შეიცავს ელემენტს
-    if(!arr[i].includes(elem)){
-        newArr.push(arr[i])
-    }
+// Input შექმენით ფუნქცია რომელიც იღებს სტრინგს
+
+// Output და აბრუნებს ახალ სტრინგს მის პირველ და ბოლო ასოების გაცვლით
+// თუ წერია რომ Anri -> inrA, და ასე შემდეგ
+
+// ეს პირობა უნდა გავითვალისწინოთ აგერ
+
+// If the length of the string is less than two, return "Incompatible.".
+// If the argument is not a string, return "Incompatible.".
+
+function flipEndChars(word) {
+  const firstIndex = word[0];
+  const lastIndex = word.length - 1;
+
+  if (typeof word != "string") {
+    return "Incompatible, Not string type";
+  } else if (word.length <= 2) {
+    return "Incompatible, To Short";
+  } else if (word[lastIndex] === firstIndex) {
+    return "Incompatible, Two's Pair";
+  } else {
+    return word.split("").reduce((acc, char) => char + acc, "");
   }
-  return newArr;
 }
 
-console.log(
-  filteredArray(
-    // SubArray, ..[arr[i]]
-    // მასივი რომელიც შეიცავს 3 ს არდაააბრუნოს, ამ შემთხვევაში ცარიელი მასივი უნდა დაბრუნდეს
-    [
-      [1,1,1],
-      [1, 6, 3],
-      [3, 13, 26],
-      [19, 3, 9],
-    ],
-    1
-  )
-);
-
-// Includes
-// თუ ეს მასივი არ შეიცავს 3-ს,დააბრუნსო ელემენტები
+console.log(flipEndChars("a"));
