@@ -11,18 +11,12 @@
 // If the argument is not a string, return "Incompatible.".
 
 function flipEndChars(word) {
-  const firstIndex = word[0];
-  const lastIndex = word.length - 1;
+  // სამივე If-ს შეადარებს და თუ სამივე True იყო დააბრუნებს ბოლო Return-ს
+  if(word.length <= 2) return "Incompatible, To Short";
+  if(typeof word != "string") return "Incompatible, Wrong Type";
+  if(word[0] === word[word.length - 1]) return "Incompatible, Two's Pair";
 
-  if (typeof word != "string") {
-    return "Incompatible, Not string type";
-  } else if (word.length <= 2) {
-    return "Incompatible, To Short";
-  } else if (word[lastIndex] === firstIndex) {
-    return "Incompatible, Two's Pair";
-  } else {
-    return word.split("").reduce((acc, char) => char + acc, "");
-  }
+  return word.split("").reduce((acc,char) => char + acc,  "")
 }
 
-console.log(flipEndChars("a"));
+console.log(flipEndChars("cat, mouse, dog."));
