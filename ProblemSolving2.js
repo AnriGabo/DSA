@@ -1,14 +1,41 @@
-// Input array of number
-// Ouput array with 2 elements პირველი ელემენტი არის ლუწი ციფრების ჯამი, მეორე ელემენტი არის კენტი ციფრების ჯამი
+// Count Letters in a Word Search
 
-function SumOfOddAndEvenNum(num) {
-  const evenSum = num
-    .filter((Item) => Item % 2 === 0)
-    .reduce((acc, char) => acc + char, 0);
-  const oddSum = num
-    .filter((Item) => Math.abs(Item % 2) === 1)
-    .reduce((acc, char) => acc + char, 0);
-  return [evenSum, oddSum];
+// შექმენითფუნქცია რომელიც იღებს ორ პარამეტრს,
+//  input  ფუნქციის პირველი  პარამეტრი მასივი და მასივში მოთავსებული 5 სტრინგის მასივი
+// input ფუნქცისს მეორე  პარამეტრი რაღაც ანბანის ნებისმიერი  ასო (სტრინგი)
+
+// Output,ჩვენმა ფუნქციამ უნდა დათვალოს რამდენჯერ მეორდება ეს ასო და დააბრუნოს შედეგი, თითოეულ მასივის ელემენტს უნდა
+// გადატარდეს და თითოეულს როცა გადაატარებს მასივის ელემენტი,გამოიტანოს შედეგი თურამდენჯერ განმეორდა ესა თუ ის მასივი 
+
+
+const WordSearch = (arr, elem) => {
+  // for loop insidde foor loop, empty variable to count 
+  var count = 0;
+
+  for (var i = 0; i < arr.length; i ++) {
+    for (var j = 0; j < arr[i].length; j++){
+      if(arr[i][j] === elem){
+        count++
+      }
+    }
+  }
+  return count;
 }
 
-console.log(SumOfOddAndEvenNum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+
+
+console.log(
+  WordSearch(
+    [
+      ["D", "B", "A", "F", "D"],
+      ["D", "C", "A", "F", "I"],
+      ["D", "B", "A", "F", "I"],
+      ["D", "B", "A", "F", "I"],
+      ["D", "B", "A", "F", "I"],
+    ],
+    "A"
+  )
+);
+
+// ცარიელი მასივი სადაც დავითვლით, for loop
