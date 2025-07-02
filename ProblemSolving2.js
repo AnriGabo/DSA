@@ -7,9 +7,9 @@
 // თუ ინფათს ექნება ცელსიუსი C კონვერტაცია როგორც F,თუ იქნება როგორც F კონვერტაცია როგორც C
 function convert(value, unit) {
   if(unit === "C"){
-    return (value * 9/5) + 32;
+    return (value * 9/5) + 32 + "F";
   }else if(unit === "F"){
-    return (value - 32) * 9/5
+    return (value - 32) * 9/5 + "C"
   }else{
     return "Error"
   }
